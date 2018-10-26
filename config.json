@@ -1,0 +1,22 @@
+{
+	"Location": "Oficina",
+	"Name": "Raspberry1",
+	"Configuration": null,
+	"DataSources": {
+		"ModbusRTU": [
+			{
+				"name": "Chiller1",
+				"function": 3,
+				"value": 100,
+				"encoding": "uint32",
+				"endian": 0,
+				"Operation": "None",
+				"operand": 0,
+				"baudrate": 19200,
+				"unit": 1,
+				"reg": 48
+			
+			}
+		]
+	}
+}
