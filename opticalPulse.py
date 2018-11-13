@@ -4,6 +4,7 @@ from time import sleep
 import os.path
 def main():
     pin = 17
+    cyclelength = 10
     pinpath = "./pulses/" + str(pin)
     kwhpath = "./pulses/kwh_" + str(pin)
     GPIO.setmode(GPIO.BCM)
@@ -26,7 +27,7 @@ def main():
         lastState = state
         sleep(0.01)
 
-        if (pulses >= 1000):
+        if (pulses >= cyclelength):
             kwh += 1
             with open(kwhpath, 'w+') as f: f.write(str(kwh))
             pulses = 0
